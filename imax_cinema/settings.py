@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'imax_cinema.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'sql_server.pyodbc',
         'NAME': 'imax',
         'USER': 'chris',
         'PASSWORD': '',
