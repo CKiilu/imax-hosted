@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'imax',
         'USER': 'scurrae',
         'PASSWORD': 'imaxscurrae',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '5432', 
         'OPTIONS': {
                 'driver': 'SQL Server Native Client 11.0',
@@ -88,6 +88,10 @@ DATABASES = {
             }
     }
 }
+
+DATABASE_URL = '/imaxdb/'
+
+DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
 AUTH_PASSWORD_VALIDATORS = (
     {
