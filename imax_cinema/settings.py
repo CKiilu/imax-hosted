@@ -78,9 +78,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
         'NAME': 'imax',
-        'USER': 'chris',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'USER': 'scurrae',
+        'PASSWORD': 'imaxscurrae',
+        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '5432', 
         'OPTIONS': {
                 'driver': 'SQL Server Native Client 11.0',
@@ -88,10 +88,6 @@ DATABASES = {
             }
     }
 }
-
-DATABASE_URL = 'postgresql:///imax'
-
-DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
 AUTH_PASSWORD_VALIDATORS = (
     {
