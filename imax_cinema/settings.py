@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'imax_cinema.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'imax',
         'USER': 'chris',
         'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '', 
+        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '5432', 
         'CONN_MAX_AGE': 500,
     }
 }
