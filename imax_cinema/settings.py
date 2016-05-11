@@ -76,22 +76,10 @@ WSGI_APPLICATION = 'imax_cinema.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'imax',
-        'USER': 'scurrae',
-        'PASSWORD': 'imaxscurrae',
-        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '5432', 
-        'OPTIONS': {
-                'driver': 'SQL Server Native Client 11.0',
-                'MARS_Connection': 'True',
-            }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-DATABASE_URL = '/imaxdb/'
-
-DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
 AUTH_PASSWORD_VALIDATORS = (
     {
